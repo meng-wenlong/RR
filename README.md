@@ -12,3 +12,4 @@ Large Language Models (LLMs) pose significant privacy risks, potentially leaking
 
 The pipeline of R.R. is illustrated above. R.R. has two steps: candidate generation and selection. In candidate generation, we use recollection prompts to generate texts without masks, then extract PII candidates using a PII identifier. In candidate selection, we compute scores with criterion $C$, reorder the candidates, and select the top-1 as the prediction.
 
+## Get Start
