@@ -1,0 +1,52 @@
+{
+  "citation": "",
+  "description": "",
+  "features": {
+    "unmasked_seq": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "masked_seq": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "pii_mask_idx": [
+      {
+        "end": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "label": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "start": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "value": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    ],
+    "pii_mask": {
+      "labels": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "values": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      }
+    }
+  },
+  "homepage": "",
+  "license": ""
+}

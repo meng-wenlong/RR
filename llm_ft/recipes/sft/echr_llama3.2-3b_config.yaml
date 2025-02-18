@@ -1,0 +1,23 @@
+# ModelConfig
+model_name_or_path: meta-llama/Llama-3.2-3B-Instruct
+model_revision: main
+torch_dtype: bfloat16
+trust_remote_code: true
+
+# ScriptArguments
+dataset_name: data_prepare/datas/echr
+
+# SFTConfig
+bf16: true
+gradient_checkpointing: true
+per_device_train_batch_size: 8
+max_seq_length: 768
+eval_strategy: epoch
+logging_strategy: steps
+logging_steps: 10
+save_strategy: epoch
+num_train_epochs: 5.0
+output_dir: outputs/llama3.2-3b-echr
+save_only_model: true
+dataset_kwargs:
+  add_special_tokens: false

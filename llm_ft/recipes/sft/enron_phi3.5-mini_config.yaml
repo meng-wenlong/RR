@@ -1,0 +1,24 @@
+# ModelConfig
+model_name_or_path: microsoft/Phi-3.5-mini-instruct
+model_revision: main
+torch_dtype: bfloat16
+trust_remote_code: true
+attn_implementation: eager
+
+# ScriptArguments
+dataset_name: data_prepare/datas/enron
+
+# SFTConfig
+bf16: true
+gradient_checkpointing: true
+per_device_train_batch_size: 8
+max_seq_length: 768
+eval_strategy: 'no'
+logging_strategy: steps
+logging_steps: 10
+save_strategy: epoch
+num_train_epochs: 5.0
+output_dir: outputs/phi3.5-mini-enron
+save_only_model: true
+dataset_kwargs:
+  add_special_tokens: false
