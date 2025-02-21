@@ -6,7 +6,7 @@ pip install accelerate
 pip install datasets
 pip install evaluate
 pip install vllm
-
+pip install presidio_analyzer
 pip install jsonlines
 
 # Install pii
