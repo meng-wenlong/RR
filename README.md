@@ -21,28 +21,6 @@ The top-1 PII prediction accuracy is as follows.
 <head>
   <meta charset="UTF-8">
   <title>Styled Table</title>
-  <style>
-    table {
-      border-collapse: collapse;
-      width: 100%;
-      font-family: Arial, sans-serif;
-    }
-
-    th, td {
-      border: 1px solid #ccc;
-      padding: 8px;
-      text-align: center !important;       /* 水平居中 */
-      vertical-align: middle !important;   /* 垂直居中 */
-    }
-
-    th {
-      background-color: #f2f2f2;
-    }
-
-    .highlight {
-      font-weight: bold;
-    }
-  </style>
 </head>
 <body>
 
@@ -86,10 +64,10 @@ The top-1 PII prediction accuracy is as follows.
     </tr>
     <tr>
       <td>R.R.</td>
-      <td class="highlight">25.68</td><td class="highlight">33.31</td><td class="highlight">28.93</td>
-      <td class="highlight">14.79</td><td class="highlight">20.61</td><td class="highlight">26.48</td>
-      <td class="highlight">16.35</td><td class="highlight">25.38</td><td class="highlight">26.41</td>
-      <td class="highlight">11.10</td><td class="highlight">16.71</td><td class="highlight">22.13</td>
+      <td><strong>25.68</strong></td><td><strong>33.31</strong></td><td><strong>28.93</strong></td>
+      <td><strong>14.79</strong></td><td><strong>20.61</strong></td><td><strong>26.48</strong></td>
+      <td><strong>16.35</strong></td><td><strong>25.38</strong></td><td><strong>26.41</strong></td>
+      <td><strong>11.10</strong></td><td><strong>16.71</strong></td><td><strong>22.13</strong></td>
     </tr>
   </tbody>
 </table>
