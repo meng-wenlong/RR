@@ -20,7 +20,6 @@ The top-1 PII prediction accuracy is as follows.
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Styled Table</title>
 </head>
 <body>
 
