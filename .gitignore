@@ -1,7 +1,6 @@
 __pycache__/
 .vscode/
 kernel_meta/
-test/
 wandb/
 outputs/
 .hypothesis/

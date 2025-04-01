@@ -1,0 +1,82 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "json",
+  "dataset_size": 147437097,
+  "description": "",
+  "download_checksums": {
+    "/zju_wck/mwl/PII-reconstruct/src/pii/datas/echr/raw/echr.jsonl": {
+      "num_bytes": 161456579,
+      "checksum": null
+    }
+  },
+  "download_size": 161456579,
+  "features": {
+    "text": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "unmasked_seq": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "masked_seq": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "pii_mask_idx": [
+      {
+        "end": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "label": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "start": {
+          "dtype": "int64",
+          "_type": "Value"
+        },
+        "value": {
+          "dtype": "string",
+          "_type": "Value"
+        }
+      }
+    ],
+    "pii_mask": {
+      "labels": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      },
+      "values": {
+        "feature": {
+          "dtype": "string",
+          "_type": "Value"
+        },
+        "_type": "Sequence"
+      }
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 308893676,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 147437097,
+      "num_examples": 75559,
+      "dataset_name": "json"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

@@ -212,7 +212,7 @@ Text with masked placeholders:\n'''
             all_generated_texts.extend(generated_texts)
         all_analyze_results = identify_piis(
             all_generated_texts, 
-            device_parallel_size=self.llm.llm_engine.parallel_config.tensor_parallel_size,
+            device_parallel_size=self.llm.tensor_parallel_size,
         )
         for i in tqdm(range(len(all_prompts)), desc="Extracting candidates"):
             completion = completions[i]

@@ -1,0 +1,20 @@
+accelerate launch fine-tune-dp.py \
+--output_dir outputs/llama3.2-3b-echr-dp-eps4 \
+--model_name meta-llama/Llama-3.2-3B-Instruct \
+--sequence_len 512 \
+--per_device_train_batch_size 8 \
+--gradient_accumulation_steps 2 \
+--eval_strategy no \
+--log_level info \
+--per_device_eval_batch_size 8 \
+--eval_accumulation_steps 1 \
+--seed 42 \
+--target_epsilon 4 \
+--per_sample_max_grad_norm 1.0 \
+--remove_unused_columns False \
+--num_train_epochs 5 \
+--logging_steps 10 \
+--learning_rate 1e-4 \
+--label_names labels \
+--enable_lora True \
+--save_strategy no

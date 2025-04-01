@@ -129,7 +129,7 @@ class TabAnalyzeGenerator(SelfQueryGenerator):
         all_generated_texts = [completion.outputs[0].text for completion in completions]
         all_analyze_results = identify_piis(
             all_generated_texts,
-            device_parallel_size=self.llm.llm_engine.parallel_config.tensor_parallel_size,
+            device_parallel_size=self.llm.tensor_parallel_size,
         )
         for i in range(len(all_prompts)):
             all_prompts[i]['completion'] = completions[i]

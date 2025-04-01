@@ -76,7 +76,7 @@ def batch_data(data_list, batch_size=200):
 
 
 def vllm_cleanup(llm):
-    del llm.llm_engine.model_executor
+    del llm.llm_engine
     del llm
     destroy_model_parallel()
     destroy_distributed_environment()
