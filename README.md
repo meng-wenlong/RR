@@ -12,6 +12,93 @@ Large Language Models (LLMs) pose significant privacy risks, potentially leaking
 
 The pipeline of R.R. is illustrated above. R.R. has two steps: candidate generation and selection. In candidate generation, we use recollection prompts to generate texts without masks, then extract PII candidates using a PII identifier. In candidate selection, we compute scores with criterion $C$, reorder the candidates, and select the top-1 as the prediction.
 
+### Results
+
+The top-1 PII prediction accuracy is as follows.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Styled Table</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: center !important;       /* 水平居中 */
+      vertical-align: middle !important;   /* 垂直居中 */
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    .highlight {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Stealer</th>
+      <th colspan="3">Llama3.1-8B</th>
+      <th colspan="3">Llama3.2-3B</th>
+      <th colspan="3">Qwen2.5-7B</th>
+      <th colspan="3">Phi3.5-Mini</th>
+    </tr>
+    <tr>
+      <th>ECHR</th><th>Enron</th><th>LLM-PC</th>
+      <th>ECHR</th><th>Enron</th><th>LLM-PC</th>
+      <th>ECHR</th><th>Enron</th><th>LLM-PC</th>
+      <th>ECHR</th><th>Enron</th><th>LLM-PC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>DirectPrompt</td>
+      <td>6.07</td><td>2.55</td><td>10.33</td>
+      <td>3.56</td><td>2.11</td><td>10.73</td>
+      <td>3.24</td><td>2.09</td><td>12.58</td>
+      <td>2.11</td><td>0.62</td><td>10.95</td>
+    </tr>
+    <tr>
+      <td>TAB</td>
+      <td>13.51</td><td>19.00</td><td>8.30</td>
+      <td>7.20</td><td>9.12</td><td>6.77</td>
+      <td>8.61</td><td>13.31</td><td>6.95</td>
+      <td>4.09</td><td>5.62</td><td>4.86</td>
+    </tr>
+    <tr>
+      <td>P2P</td>
+      <td>13.19</td><td>19.14</td><td>11.68</td>
+      <td>6.91</td><td>8.38</td><td>8.65</td>
+      <td>8.99</td><td>13.50</td><td>10.31</td>
+      <td>4.28</td><td>5.74</td><td>7.41</td>
+    </tr>
+    <tr>
+      <td>R.R.</td>
+      <td class="highlight">25.68</td><td class="highlight">33.31</td><td class="highlight">28.93</td>
+      <td class="highlight">14.79</td><td class="highlight">20.61</td><td class="highlight">26.48</td>
+      <td class="highlight">16.35</td><td class="highlight">25.38</td><td class="highlight">26.41</td>
+      <td class="highlight">11.10</td><td class="highlight">16.71</td><td class="highlight">22.13</td>
+    </tr>
+  </tbody>
+</table>
+
+</body>
+</html>
+
+
+
 ## Get Start
 
 ### Set environment
